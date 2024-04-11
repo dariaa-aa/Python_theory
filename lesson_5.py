@@ -264,7 +264,7 @@ class Animal:
         self.__owner = owner
 
 cat_1 = Animal('Frosya', 'Dasha', 'multiple', 5)
-cat_1.set_name('Love')
+cat_1.set_name('Blacky')
 # print(cat_1.get_name())
 cat_1.owner = 'me'
 # print(cat_1.owner)
@@ -279,14 +279,19 @@ class Cat(Animal):
     def says(self, word):
         return f'Cat named {self.name} says {word}'
 
-
 cat_2 = Cat('Pinky', 'Vasya', 'brown', 5)
-print(cat_2.says('fuck you'))
+print(cat_2.name)
+setattr(cat_2, 'age', 5)
+print(cat_2.age)
+# print(cat_2.says('meow meow'))
 
 class Dog(Animal):
     pass
 
-dog_1 = Dog('Pusya', 'Dima', 'red', 8)
+dog_1 = Dog('Pepsi', 'Dima', 'red', 8)
 print(dog_1.__dict__)
-dog_1.__dict__ = {'_Animal__name': 'Pusya', '_Animal__owner': 'Dima', 'color': 'red', 'speed': 8, 'type': 'mammal'}
-print(dog_1.type)
+# dog_1.__dict__ = {'_Animal__name': 'Pepsi', '_Animal__owner': 'Dima', 'color': 'red', 'speed': 8, 'type': 'mammal'}
+# print(dog_1.type)
+
+# dog_1.owner = 'G'
+# print(dog_1.owner)
